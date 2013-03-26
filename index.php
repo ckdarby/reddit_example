@@ -8,6 +8,7 @@ include('RedditParser/reddit.php');
 <head>
 	 <meta charset='utf-8'> 
 	 <title>Reddit Top PHP Stories</title>
+</head>
 <body>
 
 
