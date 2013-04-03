@@ -13,7 +13,7 @@ class Reddit extends Api
 		$ranking = array();
 
 		if(empty($this->jsonObj->data->children)){
-			throw new \Exception("Not dealing with reddit info", 1);			
+			throw new \Exception("Not dealing with reddit info");			
 		}
 
 		//Stories section
