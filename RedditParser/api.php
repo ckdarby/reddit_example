@@ -27,9 +27,9 @@ class Api
 
 		if(empty($contents)){
 			throw new \Exception("Cannot get content");
-		} else {
-			$this->contents = $contents;
 		}
+		
+		$this->contents = $contents;
 		curl_close($ch);
 	}
 
@@ -39,11 +39,10 @@ class Api
 		$json = json_decode($this->contents);
 
 		//Covers NULL & False of json_decode
-		if(!empty($json)){
-			$this->setJsonObj($json);
-		} else {
+		if(empty($json)){
 			throw new \Exception("Cannot json decode");
 		}
+		$this->setJsonObj($json);
 
 	}
 
